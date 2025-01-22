@@ -201,6 +201,11 @@ nav ul {
   text-align: center;
 }
 
+.form-group {
+  padding-left: 185px;
+  padding-right: 185px;
+}
+
 /* Контейнер для полей ввода */
 .form .input-group {
   display: flex;
