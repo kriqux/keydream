@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор стоимости дома</title>
+    <link rel="stylesheet" href="styles5.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1 class="pt-serif-bold">Рассчитать примерную стоимость дома</h1>
+      <label for="houseType" class="pt-serif-regular">Выберите тип дома:</label>
+      <select id="houseType">
+        <option value="1000">Стандарт ($1000 за кв.м)</option>
+        <option value="1500">Премиум ($1500 за кв.м)</option>
+        <option value="2000">Люкс ($2000 за кв.м)</option>
+      </select>
+
+      <label for="squareMeters" class="pt-serif-regular"
+        >Введите площадь (кв.м):</label
+      >
+      <input type="number" id="squareMeters" placeholder="например, 120" />
+
+      <label for="rooms" class="pt-serif-regular"
+        >Введите количество комнат:</label
+      >
+      <input type="number" id="rooms" placeholder="например, 3" />
+
+      <div id="roomRenovations"></div>
+
+      <button onclick="addRoomRenovations()" class="pt-serif-regular">
+        Добавить комнаты для ремонта
+      </button>
+      <button onclick="calculatePrice()" class="pt-serif-regular">
+        Рассчитать
+      </button>
+
+      <div id="result" class="result" style="display: none"></div>
+    </div>
+    <script src="script5.js" defer></script>
+  </body>
+</html>

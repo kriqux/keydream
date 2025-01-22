@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ключ к Мечте</title>
+    <link rel="stylesheet" href="styles4.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html" class="pt-serif-regular link-custom"
+          >Ключ к Мечте</a
+        >
+      </h1>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="navMenu">
+        <a href="index1.html" class="pt-serif-regular">Услуги</a>
+        <a href="index2.html" class="pt-serif-regular">Недвижимость</a>
+        <a href="index3.html" class="pt-serif-regular">Цены</a>
+        <a href="index4.html" class="pt-serif-regular">Контакты</a>
+      </nav>
+      <div class="contact-info pt-serif-bold">
+        <p>+7 (999) 123&ndash;45&ndash;67</p>
+        <p>Пн.&ndash;Пт. 9:00&ndash;17:00</p>
+      </div>
+    </header>
+    <div class="form-container">
+      <form class="form" onsubmit="return validateForm(event)">
+        <h2 class="pt-serif-bold">Заявка</h2>
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Имя" required />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Телефон"
+            pattern="^[0-9+\s()-]+$"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e-mail"
+            required
+          />
+        </div>
+        <button type="submit">Отправить заявку</button>
+        <p id="success-message" class="hidden">
+          Спасибо! Мы скоро с вами свяжемся.
+        </p>
+      </form>
+      <p class="pt-serif-regular">
+        Отправьте нам заявку, и в ближайшее время наши специалисты свяжутся с
+        вами, чтобы обсудить все детали и предложить оптимальное решение для
+        вашего будущего дома!
+      </p>
+    </div>
+    <!--<div class="hero">
+       
+      <p class="pt-serif-regular">
+        Отправьте нам заявку, и в ближайшее время наши специалисты свяжутся с
+        вами, чтобы обсудить все детали и предложить оптимальное решение для
+        вашего будущего дома!
+      </p> 
+    </div>-->
+    <div class="wrapper">
+      <div class="contact-info1">
+        <h2 class="pt-serif-bold">Режим работы</h2>
+        <h3 class="pt-serif-regular">Пн.&ndash;Пт. 9:00&ndash;17:00</h3>
+        <h2 class="pt-serif-bold">keydream@company.com</h2>
+        <h2 class="pt-serif-regular">+7 (999) 123&ndash;45&ndash;67</h2>
+        <p>
+          <a href="#">
+            <img src="images/x.png" alt="X" />
+          </a>
+          <a href="#">
+            <img src="images/vk.png" alt="VK" />
+          </a>
+          <a href="#">
+            <img src="images/tg.png" alt="Telegram" />
+          </a>
+        </p>
+      </div>
+
+      <div id="map" class="map"></div>
+    </div>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script>
+      ymaps.ready(init)
+      function init() {
+        var myMap = new ymaps.Map('map', {
+          center: [55.747606, 37.534721],
+          zoom: 15,
+        })
+
+        var myPlacemark = new ymaps.Placemark([55.747606, 37.534721], {
+          hintContent: 'Наш офис',
+          balloonContent: 'Добро пожаловать!',
+        })
+
+        myMap.geoObjects.add(myPlacemark)
+      }
+    </script>
+
+    <script src="script4.js" defer></script>
+  </body>
+</html>

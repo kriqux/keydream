@@ -1,0 +1,453 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: url('images/4.фон.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/*ГЛАВНАЯ СТРАНИЦА*?
+
+/* Шапка */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  flex-wrap: wrap;
+}
+
+.link-custom {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-custom:hover,
+.link-custom:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  gap: 30px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav a {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav a {
+    font-size: 16px;
+  }
+}
+
+.contact-info {
+  text-align: right;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    background-color: white;
+    align-items: center;
+  }
+
+  header nav a {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    padding-right: 40px;
+  }
+
+  .contact-info {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+  }
+
+  header nav {
+    gap: 15px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    font-size: 10px;
+  }
+}
+
+.form-container {
+  position: relative;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.form-container p {
+  text-align: center;
+  max-width: 850px;
+  margin: 25px auto;
+  margin-bottom: 50px;
+}
+
+.form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.form h2 {
+  color: #fff;
+  text-align: center;
+}
+
+/* Контейнер для полей ввода */
+.form .input-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Поля формы */
+.form input {
+  border: 2px solid transparent;
+  width: 100%;
+  max-width: 25em;
+  min-width: 200px;
+  height: 3em;
+  padding-left: 0.8em;
+  outline: none;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+  margin-top: 10px;
+}
+
+/* При наведении или фокусе на поле */
+.form input:hover,
+.form input:focus {
+  border: 2px solid #002ed3;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+/* Стили кнопки */
+button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  margin-top: 20px;
+  align-self: center;
+  width: auto;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(245, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 12px 20px rgba(22, 2, 153, 0.5);
+  transform: translateY(-3px);
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(245, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 5px 10px rgba(22, 2, 153, 0.3);
+  transform: translateY(3px);
+  transition: 100ms;
+}
+
+#success-message {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #e2dfdf;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  animation: fade-in 0.5s ease-in-out;
+}
+
+/* Увеличение межстрочных интервалов */
+.form-group {
+  gap: 20px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form {
+    max-width: 700px;
+    padding: 30px;
+  }
+
+  .form input {
+    width: 100%;
+    max-width: 23em;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .form {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .form input {
+    width: 100%;
+    max-width: 20em;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form input {
+    height: 2.8em;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Hero section */
+/*.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  color: #c7cdda;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 40px auto;
+  margin-bottom: 60px;
+}
+
+/* Шрифты */
+.pt-serif-regular {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.wrapper {
+  background-color: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info1 {
+  text-align: center;
+}
+
+.contact-info1 p a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.contact-info1 h2,
+.contact-info1 h3 {
+  margin: 0 0 10px;
+  color: #000;
+}
+
+.map {
+  width: 75%;
+  height: 300px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 250px;
+  }
+
+  .contact-info1 h2,
+  .contact-info1 h3 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .map {
+    height: 200px;
+  }
+
+  .contact-info1 p a img {
+    width: 20vw;
+  }
+
+  .contact-info1 h2,
+  .contact-info1 h3 {
+    font-size: 16px;
+  }
+}
