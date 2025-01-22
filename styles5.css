@@ -89,3 +89,60 @@ body {
   font-weight: 700;
   font-style: italic;
 }
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  .calculator {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .calculator h1 {
+    font-size: 20px;
+  }
+
+  .calculator input,
+  .calculator select {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .calculator button {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  .result {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  .calculator h1 {
+    font-size: 18px;
+  }
+
+  .calculator input,
+  .calculator select {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .calculator button {
+    font-size: 10px;
+    padding: 6px 15px;
+  }
+
+  .result {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
