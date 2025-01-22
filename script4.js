@@ -1,3 +1,8 @@
+function toggleMenu() {
+  var menu = document.getElementById('navMenu')
+  menu.classList.toggle('active')
+}
+
 document.getElementById('submit-button').addEventListener('click', function () {
   // Получение значений из полей
   const name = document.getElementById('name').value.trim()
